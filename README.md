@@ -141,10 +141,11 @@ You can easily set up the project by following the steps below. In that case, `D
 **Request Body:**
 ```json
 {
-    "username": "username",
-    "first_name": "First Name",
-    "last_name": "Last Name",
-    "email": "user1@gmail.com"
+  "username": "username",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "email": "user1@gmail.com",
+  "password": "helloworld"
 }
 ```
 

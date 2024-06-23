@@ -14,12 +14,5 @@ class CustomUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CustomUserModel
-        fields = ['username', 'email', 'first_name', 'last_name', 'user_type', 'date_joined']
+        fields = ['username', 'email', 'first_name', 'last_name', 'password', 'user_type', 'date_joined']
         extra_kwargs = {'password': {'write_only': True}}
-
-    def create(self, validated_data):
-        """
-        Create a new CustomUserModel instance with a generated password.
-        """
-        validated_data['password'] = generate_authentication_token()
-        return super().create(validated_data)
